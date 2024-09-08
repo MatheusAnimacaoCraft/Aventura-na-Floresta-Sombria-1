@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aventura Interativa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Bem-vindo à Aventura na Floresta Sombria</h1>
+        <p>Faça suas escolhas com sabedoria, pois elas definirão seu destino!</p>
+    </header>
+
+    <main id="historia">
+        <section id="inicio" class="capitulo">        
+            <img src="img/map.webp" alt="">
+            <p>Você está em uma Floresta Sombria. À sua frente, dois caminhos se apresentam: um para a esquerda e outro para a direita. Qual você escolherá?</p>
+            <button class="escolha" data-escolha="esquerda">Caminho da esquerda</button>
+            <button class="escolha" data-escolha="direita">Caminho da direita</button>
+        </section>
+
+        <section id="esquerda" class="capitulo" hidden>
+            <img src="img/map4.png" alt="">
+            <p>Você seguiu pelo caminho da esquerda e encontrou uma caverna misteriosa. Deseja entrar ou voltar para a floresta?</p>
+            <button class="escolha" data-escolha="caverna">Entrar na caverna</button>
+            <button class="escolha" data-escolha="inicio">Voltar para a floresta</button>
+        </section>
+        
+        <section id="caverna" class="capitulo" hidden>
+            <img src="img/map7.webp" alt="">
+            <p>Você entra na caverna. Ela está escura e fria, mas você vê uma luz ao fundo. Deseja seguir em direção à luz ou sair da caverna?</p>
+            <button class="escolha" data-escolha="luz">Seguir a luz</button>
+            <button class="escolha" data-escolha="saidaCaverna">Sair da caverna</button>
+        </section>
+        
+        <section id="luz" class="capitulo" hidden>
+            <img src="img/map13.JPG" alt="">
+            <p>A luz é uma tocha que leva a uma sala secreta. Lá, você encontra um baú de tesouro, mas há uma armadilha à frente. Tentar abrir o baú ou recuar?</p>
+            <button class="escolha" data-escolha="bau">Abrir o baú</button>
+            <button class="escolha" data-escolha="recuar">Recuar</button>
+        </section>
+        
+        <section id="bau" class="capitulo" hidden>
+            <img src="img/map6.JPG" alt="">
+            <p>Ao abrir o baú, você pega espada de diamante. 
+                e do nada, você ouvi um som de Crepper prestes a explodir e, BOOMMM!!!. Fim trágico?</p>
+            <button class="escolha" data-escolha="inicio">Recomeçar</button>
+        </section>
+        
+        <section id="recuar" class="capitulo" hidden>
+            <img src="img/map14.jpg" alt="">
+            <p>Você recuou com sabedoria. A caverna desmorona, mas você escapa a tempo. Embora sem o tesouro, você salva sua vida. Fim!</p>
+            <button class="escolha" data-escolha="inicio">Recomeçar</button>
+        </section>
+        
+        <section id="saidaCaverna" class="capitulo" hidden>
+            <img src="img/map8.JPG" alt="">
+            <p>Ao sair da caverna, você é surpreendido por uma criatura gigante. Você pode lutar ou tentar fugir.</p>
+            <button class="escolha" data-escolha="lutar">Lutar</button>
+            <button class="escolha" data-escolha="fugir">Fugir</button>
+        </section>
+        
+        <section id="lutar" class="capitulo" hidden>
+            <img src="img/map9.jpg" alt="">
+            <p>Você tenta lutar, mas a criatura é forte demais. Em uma luta épica, você sucumbe. Fim trágico!</p>
+            <button class="escolha" data-escolha="inicio">Recomeçar</button>
+        </section>
+        
+        <section id="fugir" class="capitulo" hidden>
+            <img src="img/map10.JPG" alt="">
+            <p>Você consegue fugir da criatura e, ao longe, encontra uma cidade escondida onde pode se reerguer. Parabéns, você sobreviveu!</p>
+            <button class="escolha" data-escolha="inicio">Recomeçar</button>
+        </section>
+        
+        <section id="direita" class="capitulo" hidden>
+            <img src="./img/map2.jpg" alt="">
+            <p>Você seguiu pelo caminho da direita e encontrou um rio. Você pode tentar atravessá-lo ou seguir pela margem.</p>
+            <button class="escolha" data-escolha="atravessar">Atravessar o rio</button>
+            <button class="escolha" data-escolha="margem">Seguir pela margem</button>
+        </section>
+        
+        <section id="atravessar" class="capitulo" hidden>
+            <img src="img/map3.webp" alt="">
+            <p>Você tenta atravessar o rio, mas a correnteza é muito forte. Você é arrastado para longe e nunca mais é visto. Fim trágico!</p>
+            <button class="escolha" data-escolha="inicio">Recomeçar</button>
+        </section>
+        
+        <section id="margem" class="capitulo" hidden>
+            <img src="img/map5.JPG" alt="">
+            <p>Você segue pela margem e encontra uma ponte. Atravessando a ponte, você chega a uma fortaleza abandonada. Entrar ou continuar seguindo a margem?</p>
+            <button class="escolha" data-escolha="fortaleza">Entrar na fortaleza</button>
+            <button class="escolha" data-escolha="continuarMargem">Continuar seguindo a margem</button>
+        </section>
+        
+        <section id="fortaleza" class="capitulo" hidden>
+            <img src="img/map12.jpg" alt="">
+            <p>Dentro da fortaleza, você encontra um livro antigo que lhe concede poderes mágicos. Parabéns, você agora é um mago poderoso! Fim épico!</p>
+            <button class="escolha" data-escolha="inicio">Recomeçar</button>
+        </section>
+        
+        <section id="continuarMargem" class="capitulo" hidden>
+            <img src="img/map11.JPG" alt="">
+            <p>Você continua pela margem até encontrar uma cachoeira. Atrás dela, uma passagem secreta leva você ao maior segredo da floresta: um portal para outra dimensão. Fim surpreendente!</p>
+            <button class="escolha" data-escolha="inicio">Recomeçar</button>
+        </section>
+        
+
+         
+
+    </main>
+
+    <script src="javaScript.js"></script>
+</body>
+</html>
